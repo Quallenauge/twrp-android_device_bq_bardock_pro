@@ -1,4 +1,4 @@
-Twrp Device Tree for Xiaomi Redmi 7/Y3 (onclite/onc)
+TWRP Device Tree for Xiaomi Redmi 7/Y3
 ===========================================
 
 The Xiaomi Redmi 7 (codenamed _"onclite"_) and Xiaomi Y3 (codenamed _"onc"_) is a mid-range smartphone from Xiaomi.
@@ -19,30 +19,13 @@ Front Camera  |  8 MP, f/2.0, 1.12µm
 
 ![Xiaomi Redmi 7](https://i.gadgets360cdn.com/products/large/1552901002_635_redmi_7.jpg?downsize=770:*&output-quality=70&output-format=webp "Xiaomi Redmi 7")
 
-## Features
-
-This TWRP automatically detects the device region and updates the device code name _"onclite"_ or _"onc"_
-
-Bugs:
-
-- Decryption of /data 
-- Mount of /vendor
-- Backup/Restore (Needs more testing)
-- USB OTG (Needs more testing)
-
 ## Compile
 
-First checkout minimal twrp with omnirom tree:
+First checkout Minimal TWRP with OmniROM tree:
 
 ```
 repo init -u git://github.com/minimal-manifest-twrp/platform_manifest_twrp_omni.git -b twrp-9.0
 repo sync
-```
-
-Then add these projects to .repo/manifest.xml:
-
-```xml
-<project path="device/xiaomi/onclite" name="KostyaJRZ/android_device_xiaomi_onclite-twrp" remote="github" revision="android-9.0" />
 ```
 
 Finally execute these:
@@ -50,7 +33,7 @@ Finally execute these:
 ```
 . build/envsetup.sh
 lunch omni_onclite-eng
-mka recoveryimage ALLOW_MISSING_DEPENDENCIES=true # Only if you use minimal twrp tree.
+mka recoveryimage ALLOW_MISSING_DEPENDENCIES=true # Only if you use Minimal TWRP tree.
 ```
 
 Install:
@@ -58,4 +41,3 @@ Install:
 ```
 fastboot flash recovery recovery.img
 ```
-
