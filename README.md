@@ -56,5 +56,7 @@ fastboot flash recovery recovery.img
 Or use Official TWRP App to install it.
 
 ## Credits
-Thanks to @Mauronofrio for his work
+
+Thanks to @mauronofrio for his work on TWRP
+
 Thanks to @Dhina_17 for 'onclite' blobs
