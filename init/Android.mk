@@ -1,5 +1,5 @@
 #
-# Copyright (C) 2020 The TeamWin Project
+# Copyright (C) 2020 TeamWin Project
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -12,11 +12,17 @@
 # WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 # See the License for the specific language governing permissions and
 # limitations under the License.
+#
 
-PRODUCT_MAKEFILES := \
-    $(LOCAL_DIR)/omni_onclite.mk
+LOCAL_PATH := $(call my-dir)
 
-COMMON_LUNCH_CHOICES := \
-    omni_onclite-user \
-    omni_onclite-userdebug \
-    omni_onclite-eng
+include $(CLEAR_VARS)
+
+LOCAL_MODULE_TAGS := optional
+LOCAL_C_INCLUDES := \
+    system/core/base/include \
+    system/core/init
+LOCAL_SRC_FILES := init_onclite.cpp
+LOCAL_MODULE := libinit_onclite
+
+include $(BUILD_STATIC_LIBRARY)
