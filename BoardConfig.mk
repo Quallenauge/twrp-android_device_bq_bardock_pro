@@ -10,6 +10,8 @@ include device/xiaomi/mithorium-common/BoardConfigCommon.mk
 DEVICE_PATH := device/xiaomi/mi439
 
 # Kernel
+BOARD_BOOTIMG_HEADER_VERSION := 1
+BOARD_MKBOOTIMG_ARGS += --header_version $(BOARD_BOOTIMG_HEADER_VERSION)
 TARGET_PREBUILT_KERNEL := device/xiaomi/kernel-mithorium/mi439/Image.gz-dtb
 
 # Partitions
