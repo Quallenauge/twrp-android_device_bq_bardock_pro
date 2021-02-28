@@ -19,6 +19,9 @@ PRODUCT_RELEASE_NAME := onclite
 
 # Inherit from this configs
 $(call inherit-product, build/target/product/embedded.mk)
+$(call inherit-product, $(SRC_TARGET_DIR)/product/core_64_bit.mk)
+
+# Inherit from our custom product configuration
 $(call inherit-product, vendor/omni/config/common.mk)
 
 # Device identifier. This must come after all inclusions.
@@ -28,6 +31,13 @@ PRODUCT_BRAND := Xiaomi
 PRODUCT_MODEL := Redmi 7
 PRODUCT_MANUFACTURER := Xiaomi
 
+PRODUCT_BUILD_PROP_OVERRIDES += \
+    PRIVATE_BUILD_DESC="onclite-user 10 QKQ1.191008.001 V11.0.1.0.QFLMIXM release-keys"
+
+BUILD_FINGERPRINT := "xiaomi/onclite/onclite:10/QKQ1.191008.001/V11.0.1.0.QFLMIXM:user/release-keys"
+
+PRODUCT_GMS_CLIENTID_BASE := android-xiaomi
+
 PRODUCT_SYSTEM_PROPERTY_BLACKLIST += \
     ro.product.device \
     ro.product.name \
@@ -35,5 +45,8 @@ PRODUCT_SYSTEM_PROPERTY_BLACKLIST += \
 
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.vendor.build.security_patch=2099-12-31 \
-	ro.secure=1 \
-	ro.adb.secure=0
+    ro.treble.enabled=true \
+    ro.secure=1 \
+    ro.adb.secure=0 \
+    persist.sys.isUsbOtgEnabled=true
+
