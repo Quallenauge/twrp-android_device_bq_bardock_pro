@@ -2,6 +2,8 @@
 
 source /system/bin/mithorium-utils.sh
 
+LAST_CODENAME_FILE="/mnt/cache/last-recovery-codename"
+
 case "$(cat /sys/firmware/devicetree/base/model)" in
 	"PINE QRD")
 		set_device_codename "pine"
@@ -16,5 +18,13 @@ case "$(cat /sys/firmware/devicetree/base/model)" in
 		setprop "persist.vendor.ctm.disallowed" "true"
 		;;
 esac
+
+mkdir -p /mnt/cache
+umount /mnt/cache || true
+mount -o ro /dev/block/by-name/cache /mnt/cache || true
+if [ -f "$LAST_CODENAME_FILE" ]; then
+	set_device_codename "$(cat $LAST_CODENAME_FILE)"
+fi
+umount /mnt/cache || true
 
 exit 0
