@@ -5,9 +5,9 @@
 #
 
 PRODUCT_MAKEFILES := \
-    $(LOCAL_DIR)/twrp_mi8937.mk
+    $(LOCAL_DIR)/twrp_mi439.mk
 
 COMMON_LUNCH_CHOICES := \
-    twrp_mi8937-user \
-    twrp_mi8937-userdebug \
-    twrp_mi8937-eng
+    twrp_mi439-user \
+    twrp_mi439-userdebug \
+    twrp_mi439-eng
