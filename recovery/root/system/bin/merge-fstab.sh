@@ -22,7 +22,7 @@ if mount -o ro /dev/block/bootdevice/by-name/userdata /data; then
 fi
 
 # Dynamic Partitions
-if dd if=/dev/block/by-name/system bs=256k count=1|strings|grep mi8937_dynpart > /dev/null; then
+if dd if=/dev/block/by-name/system bs=256k count=1|strings|grep mi439_dynpart > /dev/null; then
     echo >> /system/etc/recovery.fstab
     for p in system system_ext product vendor odm; do
         echo "${p} /${p} ext4 rw,barrier=1,discard wait,logical" >> /system/etc/recovery.fstab

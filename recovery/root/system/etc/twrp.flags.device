@@ -1,5 +1,11 @@
 # mount point   fstype  device                      device2                     flags
 
+# DTBO
+/dtbo           emmc    /dev/block/bootdevice/by-name/dtbo                      flags=display="DTBO";backup=1;flashimg=1
+
 # Data
 /data           ext4    /dev/block/bootdevice/by-name/userdata                  flags=encryptable=footer;fsflags="discard"
-/metadata       ext4    /dev/block/bootdevice/by-name/oem                       flags=display="Metadata";fsflags="discard"
+/metadata       ext4    /dev/block/bootdevice/by-name/logdump                   flags=display="Metadata";fsflags="discard"
+
+# VBMeta
+/vbmeta         emmc    /dev/block/bootdevice/by-name/vbmeta                    flags=display="VBMeta";backup=1;flashimg=1
