@@ -6,8 +6,6 @@
 
 # Crypto
 MITHORIUM_INCLUDE_CRYPTO_FBE := true
-MITHORIUM_INCLUDE_CRYPTO_FDE := true
-MITHORIUM_LEGACY_CRYPTO := true
 
 # Inherit from mithorium-common
 $(call inherit-product, device/xiaomi/mithorium-common/mithorium.mk)
