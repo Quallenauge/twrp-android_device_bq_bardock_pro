@@ -19,9 +19,6 @@ BOARD_INCLUDE_RECOVERY_DTBO := true
 BOARD_KERNEL_SEPARATED_DTBO := true
 BOARD_PREBUILT_DTBOIMAGE := device/xiaomi/kernel-mithorium/onclite/dtbo.img
 
-# Partitions
-BOARD_USES_METADATA_PARTITION := true
-
 # Partitions - dynamic
 BOARD_SUPER_PARTITION_BLOCK_DEVICES := cust system vendor
 BOARD_SUPER_PARTITION_METADATA_DEVICE := system

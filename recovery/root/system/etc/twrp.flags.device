@@ -5,7 +5,6 @@
 
 # Data
 /data           ext4    /dev/block/bootdevice/by-name/userdata                  flags=fileencryption=ice;fsflags="discard"
-/metadata       ext4    /dev/block/bootdevice/by-name/logdump                   flags=display="Metadata";fsflags="discard"
 
 # VBMeta
 /vbmeta         emmc    /dev/block/bootdevice/by-name/vbmeta                    flags=display="VBMeta";backup=1;flashimg=1
