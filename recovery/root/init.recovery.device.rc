@@ -1,6 +1,7 @@
 # DT2W
 on init
-    write /proc/sys/dev/dt2w 1
+    write /proc/goodix_gesture 1
+    write /sys/devices/platform/soc/78b7000.i2c/i2c-3/3-0038/fts_gesture_mode 1
 
 # Fstab
 on init
