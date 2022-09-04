@@ -7,17 +7,17 @@
 # Inherit from common mithorium-common
 include device/xiaomi/mithorium-common/BoardConfigCommon.mk
 
-DEVICE_PATH := device/xiaomi/mi439
+DEVICE_PATH := device/xiaomi/onclite
 
 # Kernel
 BOARD_BOOTIMG_HEADER_VERSION := 1
 BOARD_MKBOOTIMG_ARGS += --header_version $(BOARD_BOOTIMG_HEADER_VERSION)
-TARGET_PREBUILT_KERNEL := device/xiaomi/kernel-mithorium/mi439/Image.gz-dtb
+TARGET_PREBUILT_KERNEL := device/xiaomi/kernel-mithorium/onclite/Image.gz-dtb
 
 # Kernel - DTBO
 BOARD_INCLUDE_RECOVERY_DTBO := true
 BOARD_KERNEL_SEPARATED_DTBO := true
-BOARD_PREBUILT_DTBOIMAGE := device/xiaomi/kernel-mithorium/mi439/dtbo.img
+BOARD_PREBUILT_DTBOIMAGE := device/xiaomi/kernel-mithorium/onclite/dtbo.img
 
 # Partitions
 BOARD_USES_METADATA_PARTITION := true
