@@ -10,8 +10,6 @@ include device/bq/msm8953-common/BoardConfigCommon.mk
 DEVICE_PATH := device/bq/bardock_pro
 
 # Kernel
-BOARD_BOOTIMG_HEADER_VERSION := 1
-BOARD_MKBOOTIMG_ARGS += --header_version $(BOARD_BOOTIMG_HEADER_VERSION)
 TARGET_PREBUILT_KERNEL := $(DEVICE_PATH)/prebuilt/Image.gz-dtb
 
 # Properties
