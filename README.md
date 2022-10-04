@@ -1,1 +1,1 @@
-# Device Tree for Xiaomi Redmi 7 (onclite)
+# Device Tree for BQ Aquaris X Pro (bardock_pro)

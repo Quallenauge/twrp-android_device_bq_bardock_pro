@@ -5,10 +5,10 @@
 #
 
 # Crypto
-MITHORIUM_INCLUDE_CRYPTO_FBE := true
+MSM8953_INCLUDE_CRYPTO_FBE := true
 
 # Inherit from mithorium-common
-$(call inherit-product, device/xiaomi/mithorium-common/mithorium.mk)
+$(call inherit-product, device/bq/msm8953-common/msm8953.mk)
 
 # Soong namespaces
 PRODUCT_SOONG_NAMESPACES += \

@@ -5,9 +5,9 @@
 #
 
 PRODUCT_MAKEFILES := \
-    $(LOCAL_DIR)/twrp_onclite.mk
+    $(LOCAL_DIR)/twrp_bardock_pro.mk
 
 COMMON_LUNCH_CHOICES := \
-    twrp_onclite-user \
-    twrp_onclite-userdebug \
-    twrp_onclite-eng
+    twrp_bardock_pro-user \
+    twrp_bardock_pro-userdebug \
+    twrp_bardock_pro-eng
