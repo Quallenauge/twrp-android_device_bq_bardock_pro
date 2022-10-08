@@ -1,4 +1,4 @@
 # mount point   fstype  device                      device2                     flags
 
 # Data
-/data           ext4    /dev/block/bootdevice/by-name/userdata                  flags=fileencryption=ice;fsflags="discard"
+/data           ext4    /dev/block/bootdevice/by-name/userdata                  flags=fileencryption=aes-256-xts:aes-256-cts;fsflags="discard"
